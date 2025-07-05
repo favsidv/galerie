@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react'
 import './Header.css'
+import GradientBlur from './GradientBlur'
 
 function Header() {
-  const [currency, setCurrency] = useState('EUR')
   const [isVisible, setIsVisible] = useState(true)
   const [lastScrollY, setLastScrollY] = useState(0)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -36,17 +36,10 @@ function Header() {
       <header className={isVisible ? 'header-visible' : 'header-hidden'}>
         <a href="" className='header-catalogue'>CATALOGUE</a>
         <p className='header-logo' onClick={() => window.location.href = '/'}>GALERIE</p>
-        <div className='header-currency'>
-          <select 
-            value={currency} 
-            onChange={(e) => setCurrency(e.target.value)}
-            className='currency-select'
-          >
-            <option value="EUR">EUR</option>
-            <option value="USD">USD</option>
-          </select>
+        <div className='header-right'>
+          <a href="" className='header-contact'>CONTACT</a>
+          <a href="" className='header-login'>LOGIN</a>
         </div>
-        <a href="" className='header-contact'>CONTACT</a>
         
         <div className='hamburger-menu' onClick={toggleMenu}>
           <span className={`hamburger-line ${isMenuOpen ? 'open' : ''}`}></span>
@@ -59,18 +52,11 @@ function Header() {
         <div className='mobile-menu-content'>
           <a href="" className='mobile-menu-item'>CATALOGUE</a>
           <a href="" className='mobile-menu-item'>CONTACT</a>
-          <div className='mobile-menu-currency'>
-            <select 
-              value={currency} 
-              onChange={(e) => setCurrency(e.target.value)}
-              className='mobile-currency-select'
-            >
-              <option value="EUR">EUR</option>
-              <option value="USD">USD</option>
-            </select>
-          </div>
+          <a href="" className='mobile-menu-item'>LOGIN</a>
         </div>
       </div>
+
+      <GradientBlur isVisible={isVisible} />
     </> 
   )
 }

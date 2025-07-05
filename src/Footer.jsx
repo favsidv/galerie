@@ -6,31 +6,30 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-column">
-          <h3 className="footer-logo">Galerie</h3>
+          <h3 className="footer-logo">GALERIE</h3>
           <p>The new era of art investing.</p>
         </div>
         <div className="footer-column">
           <h4 className="footer-heading">Navigate</h4>
           <a href="#" className="footer-link">Home</a>
-          <a href="#" className="footer-link">Gallery</a>
-          <a href="#" className="footer-link">About</a>
-        </div>
-        <div className="footer-column">
-          <h4 className="footer-heading">Support</h4>
+          <a href="#" className="footer-link">How It Works</a>
           <a href="#" className="footer-link">FAQ</a>
-          <a href="#" className="footer-link">Contact Us</a>
-          <a href="#" className="footer-link">Terms of Service</a>
         </div>
         <div className="footer-column">
-          <h4 className="footer-heading">Join Our Newsletter</h4>
-          <form className="newsletter-form">
-            <input type="email" placeholder="Your email address" className="newsletter-input" />
-            <button type="submit" className="newsletter-button">Subscribe</button>
-          </form>
+          <h4 className="footer-heading">Ecosystem</h4>
+          <a href="#" className="footer-link">Flow</a>
+          <a href="#" className="footer-link">Privy</a>
+          <a href="#" className="footer-link">???</a>
+        </div>
+        <div className="footer-column">
+          <h4 className="footer-heading">Company</h4>
+          <a href="#" className="footer-link">Privacy</a>
+          <a href="#" className="footer-link">Terms</a>
+          <a href="#" className="footer-link">Contact</a>
         </div>
       </div>
       <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Galerie. All rights reserved.</p>
+        <p>&copy; {new Date().getFullYear()} GALERIE. All rights reserved.</p>
       </div>
     </footer>
   );

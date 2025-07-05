@@ -118,11 +118,9 @@ function App() {
     <>
       <style>{keyframes}</style>
       <div className='app'>
-        <div style={{zIndex: 2}}>
-          <p className='app-undertitle'>ONCHAIN<br />GALLERY</p>
-          <p className='app-title'>A GALErIE<br />FOr<br />DIGITAL ArTS</p>
-          <p className='app-sort'>Balance<br /><span className="app-sort-s1">your space,</span><br /><span className="app-sort-s2">and</span><br /><span className="app-sort-s3">Tokenize<br />your vision.</span></p>
-        </div>
+        <p style={{zIndex: 2}} className='app-undertitle'>ONCHAIN<br />GALLERY</p>
+        <p style={{zIndex: 2}} className='app-title'>A GALErIE<br />FOr<br />DIGITAL ArTS</p>
+        <p style={{zIndex: 2}} className='app-sort'>Balance<br /><span className="app-sort-s1">your space,</span><br /><span className="app-sort-s2">and</span><br /><span className="app-sort-s3">Tokenize<br />your vision.</span></p>
       </div>
       <div style={{zIndex: 2}}>
         <img 

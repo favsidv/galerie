@@ -6,6 +6,7 @@ import artwork1 from '/images/artwork1.webp';
 import artwork2 from '/images/artwork2.jpeg';
 import artwork3 from '/images/artwork3.jpg';
 import artwork4 from '/images/artwork4.jpg';
+import artwork5 from '/images/joconde.jpg';
 import artwork6 from '/images/artwork6.jpg';
 import artwork7 from '/images/artwork7.jpg';
 import artwork8 from '/images/artwork8.jpg';
@@ -32,6 +33,7 @@ const HowItWorks = () => {
     { src: artwork2, alt: 'Artwork 2' },
     { src: artwork3, alt: 'Artwork 3' },
     { src: artwork4, alt: 'Artwork 4' },
+    { src: artwork5, alt: 'Artwork 5' },
     { src: artwork6, alt: 'Artwork 6' },
     { src: artwork7, alt: 'Artwork 7' },
     { src: artwork8, alt: 'Artwork 8' },

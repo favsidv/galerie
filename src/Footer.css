@@ -1,27 +1,28 @@
 .footer {
-  background: linear-gradient(4.66deg, #FD8D6C -8%, rgba(244, 240, 235, 1) 20%);
+  background: linear-gradient(4.66deg, #FD8D6C -8%, transparent 20%);
   color: black;
-  padding: 60px 24px;
+  padding: 60px 0;
 }
 
 .footer-content {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 40px;
+  gap: 100px;
   max-width: 1200px;
   margin: 0 auto;
   padding-bottom: 40px;
 }
 
 .footer-column .footer-logo {
-  font-family: 'Canela', sans-serif;
+  font-family: 'Bigilla', sans-serif;
   font-size: 32px;
   margin-bottom: 10px;
 }
 
 .footer-column p {
-  font-family: 'Adieu', sans-serif;
+  font-family: 'Helvetica', sans-serif;
   font-size: 14px;
+  font-weight: 400;
   color: #aaa;
 }
 
@@ -38,7 +39,8 @@
   color: #aaa;
   text-decoration: none;
   margin-bottom: 12px;
-  font-family: 'Adieu', sans-serif;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 500;
   transition: color 0.3s ease;
 }
 
@@ -91,7 +93,7 @@
 
 @media (min-width: 1024px) {
   .footer-content {
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: 2fr 0fr 0fr 0fr;
     text-align: left;
   }
 } 

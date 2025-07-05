@@ -27,7 +27,14 @@ const FAQItem = ({ faq, index, activeIndex, setActiveIndex }) => {
     <div className="faq-item">
       <button className="faq-question" onClick={() => setActiveIndex(isActive ? null : index)}>
         <span>{faq.question}</span>
-        <span className="faq-icon">{isActive ? '-' : '+'}</span>
+        {isActive ? (
+          <div style={{ width: '10px', height: '2px', backgroundColor: 'black' }} />
+        ) : (
+          <div style={{ position: 'relative', width: '10px', height: '10px' }}>
+            <div style={{ position: 'absolute', top: '4px', left: '0', width: '10px', height: '2px', backgroundColor: 'black' }} />
+            <div style={{ position: 'absolute', top: '4px', left: '0', width: '10px', height: '2px', backgroundColor: 'black', transform: 'rotate(90deg)' }} />
+          </div>
+        )}
       </button>
       <div className={`faq-answer ${isActive ? 'active' : ''}`}>
         <p>{faq.answer}</p>
@@ -41,17 +48,19 @@ const FAQ = () => {
 
   return (
     <section className="faq-section">
-      <h2 className="faq-title">Frequently Asked Questions</h2>
-      <div className="faq-list">
-        {faqs.map((faq, index) => (
-          <FAQItem
-            key={index}
-            faq={faq}
-            index={index}
-            activeIndex={activeIndex}
-            setActiveIndex={setActiveIndex}
-          />
-        ))}
+      <div className="faq-container">
+        <h2 className="faq-title">Frequently Asked<br />Questions</h2>
+        <div className="faq-list">
+          {faqs.map((faq, index) => (
+            <FAQItem
+              key={index}
+              faq={faq}
+              index={index}
+              activeIndex={activeIndex}
+              setActiveIndex={setActiveIndex}
+            />
+          ))}
+        </div>
       </div>
     </section>
   );
