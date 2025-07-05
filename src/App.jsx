@@ -130,6 +130,7 @@ function App() {
           src="/images/joconde.jpg" 
           alt="Mona Lisa, La Joconde" 
           className='app-monalisa' 
+          style={{zIndex: 2}}
         />
         <div 
           ref={artworkContainerRef}
