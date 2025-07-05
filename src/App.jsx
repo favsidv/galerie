@@ -47,10 +47,14 @@ function App() {
           // Animation terminée: cacher le monalisa et montrer l'artwork 5
           monalisaRef.current.style.opacity = '0'
           artwork5Ref.current.style.opacity = '1'
+          // Déclencher l'animation de défilement
+          artworkContainerRef.current.classList.add('scrolling')
         } else {
           // Animation en cours: montrer le monalisa et cacher l'artwork 5
           monalisaRef.current.style.opacity = '1'
           artwork5Ref.current.style.opacity = '0'
+          // Arrêter l'animation de défilement
+          artworkContainerRef.current.classList.remove('scrolling')
         }
       }
     }
@@ -85,20 +89,32 @@ function App() {
         className='artwork-container'
       >
         <div className='artwork-scroll'>
-          <img src="/images/joconde.jpg" alt="Artwork 1" className='artwork-item' />
-          <img src="/images/joconde.jpg" alt="Artwork 2" className='artwork-item' />
-          <img src="/images/joconde.jpg" alt="Artwork 3" className='artwork-item' />
-          <img src="/images/joconde.jpg" alt="Artwork 4" className='artwork-item' />
+          {/* Premier groupe d'artworks */}
+          <img src="/images/artwork1.jpg" alt="Artwork 1" className='artwork-item' />
+          <img src="/images/artwork2.jpg" alt="Artwork 2" className='artwork-item' />
+          <img src="/images/artwork3.jpg" alt="Artwork 3" className='artwork-item' />
+          <img src="/images/artwork4.jpg" alt="Artwork 4" className='artwork-item' />
           <img 
             ref={artwork5Ref}
             src="/images/joconde.jpg" 
             alt="Artwork 5" 
             className='artwork-item' 
           />
-          <img src="/images/joconde.jpg" alt="Artwork 6" className='artwork-item' />
-          <img src="/images/joconde.jpg" alt="Artwork 7" className='artwork-item' />
-          <img src="/images/joconde.jpg" alt="Artwork 8" className='artwork-item' />
-          <img src="/images/joconde.jpg" alt="Artwork 9" className='artwork-item' />
+          <img src="/images/artwork6.jpg" alt="Artwork 6" className='artwork-item' />
+          <img src="/images/artwork7.jpg" alt="Artwork 7" className='artwork-item' />
+          <img src="/images/artwork8.jpg" alt="Artwork 8" className='artwork-item' />
+          <img src="/images/artwork9.jpg" alt="Artwork 9" className='artwork-item' />
+          
+          {/* Deuxième groupe d'artworks (duplication pour l'effet infini) */}
+          <img src="/images/artwork1.jpg" alt="Artwork 1" className='artwork-item' />
+          <img src="/images/artwork2.jpg" alt="Artwork 2" className='artwork-item' />
+          <img src="/images/artwork3.jpg" alt="Artwork 3" className='artwork-item' />
+          <img src="/images/artwork4.jpg" alt="Artwork 4" className='artwork-item' />
+          <img src="/images/joconde.jpg" alt="Artwork 5" className='artwork-item' />
+          <img src="/images/artwork6.jpg" alt="Artwork 6" className='artwork-item' />
+          <img src="/images/artwork7.jpg" alt="Artwork 7" className='artwork-item' />
+          <img src="/images/artwork8.jpg" alt="Artwork 8" className='artwork-item' />
+          <img src="/images/artwork9.jpg" alt="Artwork 9" className='artwork-item' />
         </div>
       </div>
     </>
