@@ -202,14 +202,12 @@ header {
     transform: translateY(-55px);
   }
   
-  /* Masquer les éléments du header sur mobile */
   .header-catalogue,
   .header-contact,
   .header-currency {
     display: none;
   }
   
-  /* Afficher le menu hamburger */
   .hamburger-menu {
     display: flex;
   }

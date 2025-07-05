@@ -84,4 +84,54 @@ body::after {
   top: 60%;
   width: 250px;
   height: auto;
+  border-radius: 15px;
+  transform-origin: center;
+}
+
+
+
+
+
+.artwork-container {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100vw;
+  overflow: hidden;
+  display: flex;
+}
+
+.artwork-scroll {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  animation: none;
+  transform: translateX(calc(50vw - 1200px - 125px));
+}
+
+.artwork-container.scrolling .artwork-scroll {
+  animation: scrollLeft 20s linear infinite;
+}
+
+.artwork-item {
+  width: 250px;
+  height: auto;
+  border-radius: 15px;
+  flex-shrink: 0;
+  transform-origin: center;
+}
+
+.artwork-item.artwork-main {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
