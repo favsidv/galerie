@@ -138,7 +138,7 @@ function App() {
             <img src="/images/artwork1.webp" alt="Artwork 1" className='artwork-item' />
             <img src="/images/artwork2.jpeg" alt="Artwork 2" className='artwork-item' />
             <img src="/images/artwork3.jpg" alt="Artwork 3" className='artwork-item' />
-            <img src="/images/artwork4.jpeg" alt="Artwork 4" className='artwork-item' />
+            <img src="/images/artwork4.png" alt="Artwork 4" className='artwork-item' />
             <img 
               ref={artwork5ScrollingRef}
               src="/images/joconde.jpg" 
@@ -148,17 +148,17 @@ function App() {
             <img src="/images/artwork6.jpg" alt="Artwork 6" className='artwork-item' />
             <img src="/images/artwork7.jpg" alt="Artwork 7" className='artwork-item' />
             <img src="/images/artwork8.jpg" alt="Artwork 8" className='artwork-item' />
-            <img src="/images/artwork9.jpg" alt="Artwork 9" className='artwork-item' />
+            <img src="/images/artwork9.png" alt="Artwork 9" className='artwork-item' />
             
             <img src="/images/artwork1.webp" alt="Artwork 1" className='artwork-item' />
             <img src="/images/artwork2.jpeg" alt="Artwork 2" className='artwork-item' />
             <img src="/images/artwork3.jpg" alt="Artwork 3" className='artwork-item' />
-            <img src="/images/artwork4.jpeg" alt="Artwork 4" className='artwork-item' />
+            <img src="/images/artwork4.png" alt="Artwork 4" className='artwork-item' />
             <img src="/images/joconde.jpg" alt="Artwork 5" className='artwork-item' />
             <img src="/images/artwork6.jpg" alt="Artwork 6" className='artwork-item' />
             <img src="/images/artwork7.jpg" alt="Artwork 7" className='artwork-item' />
             <img src="/images/artwork8.jpg" alt="Artwork 8" className='artwork-item' />
-            <img src="/images/artwork9.jpg" alt="Artwork 9" className='artwork-item' />
+            <img src="/images/artwork9.png" alt="Artwork 9" className='artwork-item' />
           </div>
           <img
             ref={artwork5StaticRef}

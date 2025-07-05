@@ -5,12 +5,12 @@ import './HowItWorks.css';
 import artwork1 from '/images/artwork1.webp';
 import artwork2 from '/images/artwork2.jpeg';
 import artwork3 from '/images/artwork3.jpg';
-import artwork4 from '/images/artwork4.jpeg';
+import artwork4 from '/images/artwork4.png';
 import artwork5 from '/images/joconde.jpg';
 import artwork6 from '/images/artwork6.jpg';
 import artwork7 from '/images/artwork7.jpg';
 import artwork8 from '/images/artwork8.jpg';
-import artwork9 from '/images/artwork9.jpg';
+import artwork9 from '/images/artwork9.png';
 
 const HowItWorks = () => {
   const steps = [
