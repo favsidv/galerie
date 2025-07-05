@@ -100,7 +100,7 @@ function App() {
           artwork5ScrollingRef.current.style.opacity = '0';
           artworkContainerRef.current.classList.remove('scrolling');
 
-          artwork5StaticRef.current.style.opacity = progress > 0.9 ? '1' : '0';
+          artwork5StaticRef.current.style.opacity = progress > 1 ? '1' : '0';
         }
       }
     }
@@ -120,7 +120,7 @@ function App() {
       <div className='app'>
         <div style={{zIndex: 2}}>
           <p className='app-undertitle'>ONCHAIN<br />GALLERY</p>
-          <p className='app-title'>A GALERIE<br />FOr<br />DIGITAL ArTS</p>
+          <p className='app-title'>A GALErIE<br />FOr<br />DIGITAL ArTS</p>
           <p className='app-sort'>Balance<br /><span className="app-sort-s1">your space,</span><br /><span className="app-sort-s2">and</span><br /><span className="app-sort-s3">Tokenize<br />your vision.</span></p>
         </div>
       </div>
@@ -128,8 +128,8 @@ function App() {
         <img 
           ref={monalisaRef}
           src="/images/joconde.jpg" 
-          alt="Mona Lisa, La Joconde" 
-          className='app-monalisa' 
+          alt="Mona Lisa, La Joconde"
+          className='app-monalisa'
           style={{zIndex: 2}}
         />
         <div 
@@ -137,7 +137,6 @@ function App() {
           className='artwork-container'
         >
           <div className='artwork-scroll' ref={artworkScrollRef}>
-            {/* Premier groupe d'artworks */}
             <img src="/images/artwork1.webp" alt="Artwork 1" className='artwork-item' />
             <img src="/images/artwork2.jpeg" alt="Artwork 2" className='artwork-item' />
             <img src="/images/artwork3.jpg" alt="Artwork 3" className='artwork-item' />
@@ -153,7 +152,6 @@ function App() {
             <img src="/images/artwork8.jpg" alt="Artwork 8" className='artwork-item' />
             <img src="/images/artwork9.jpg" alt="Artwork 9" className='artwork-item' />
             
-            {/* Deuxième groupe d'artworks (duplication pour l'effet infini) */}
             <img src="/images/artwork1.webp" alt="Artwork 1" className='artwork-item' />
             <img src="/images/artwork2.jpeg" alt="Artwork 2" className='artwork-item' />
             <img src="/images/artwork3.jpg" alt="Artwork 3" className='artwork-item' />

@@ -60,7 +60,6 @@ function Header() {
           <a href="" className='mobile-menu-item'>CATALOGUE</a>
           <a href="" className='mobile-menu-item'>CONTACT</a>
           <div className='mobile-menu-currency'>
-            <label>Devise:</label>
             <select 
               value={currency} 
               onChange={(e) => setCurrency(e.target.value)}
