@@ -1,65 +1,98 @@
 .how-it-works {
-  background-color: transparent;
-  padding: 0 0 100px 0;
+  padding: 50px 20px;
   text-align: center;
 }
 
 .how-it-works-title {
-  font-family: 'Canela', sans-serif;
-  font-size: 48px;
-  margin-bottom: 60px;
+  font-size: 2.5rem;
+  margin-bottom: 10px;
   color: black;
 }
 
-.steps-container {
-  display: grid;
-  grid-template-columns: 1fr;
+.how-it-works-undertitle {
+  font-size: 1.2rem;
+  color: black;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 200;
+  margin-bottom: 80px;
+  font-weight: normal;
+  opacity: 0.3;
+}
+
+.how-it-works-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
 }
 
-.step-card {
-  background-color: rgba(255, 255, 255, 0.6);
-  border: 3px solid rgba(255, 255, 255, 0.3);
-  padding: 30px;
-  border-radius: 15px;
+.steps-container {
+  flex: 1;
+  max-width: 40%;
+  display: flex;
+  flex-direction: column;
   text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.step-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+.step-card {
+  padding: 20px;
+  border-radius: 8px;
+  position: relative;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
 }
 
 .step-number {
-  font-family: 'Adieu', sans-serif;
-  font-size: 24px;
-  color: #888;
-  margin-bottom: 20px;
-  display: block;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  background-color: #FFD4BD;
+  min-width: 50px;
+  height: 50px;
 }
 
 .step-title {
+  font-size: 1.5rem;
   font-family: 'Canela', sans-serif;
-  font-size: 28px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
+  text-transform: uppercase;
   color: black;
 }
 
 .step-description {
-  font-family: 'Adieu', sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  color: #333;
+  font-size: 1rem;
+  font-family: 'Helvetica', sans-serif;
+  font-weight: 300;
+  color: black;
+  opacity: 0.5;
+}
+
+.mosaic-container {
+  flex: 1.5;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-auto-rows: 200px;
+  grid-gap: 10px;
+}
+
+.mosaic-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
 }
 
 /* Tablet */
 @media (min-width: 768px) {
   .steps-container {
     grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
   }
 }
 
@@ -70,6 +103,5 @@
   }
   .steps-container {
     grid-template-columns: repeat(3, 1fr);
-    gap: 60px;
   }
 } 
