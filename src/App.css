@@ -1,9 +1,11 @@
+/* Base styles (Mobile) */
 .app {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100vw;
+  position: relative;
 }
 
 body::after {
@@ -24,14 +26,13 @@ body::after {
 .app-undertitle {
   position: absolute;
   font-family: 'Adieu', sans-serif;
-  font-size: 1rem;
-  left: 20%;
-  top: 40%;
+  font-size: 16px;
+  left: 24px;
+  top: 150px;
 }
 
 .app-title {
-  font-size: clamp(3rem, 20vw, 14rem);
-  margin: 100px auto auto auto;
+  font-size: 80px;
   text-align: center;
   letter-spacing: -0.064em;
   font-weight: 400;
@@ -40,27 +41,18 @@ body::after {
 }
 
 .app-sort {
-  position: absolute;
-  left: 75%;
-  font-family: 'Canela', sans-serif;
-  font-size: 2rem;
-  letter-spacing: -0.032em;
-  line-height: 0.8;
+  display: none; /* Hidden on mobile */
 }
 
 .app-arrow {
-  position: absolute;
-  left: 80%;
-  top: 77%;
-  width: 125px;
-  height: auto;
-  object-fit: contain;
+  display: none; /* Hidden on mobile */
 }
 
 .app-button {
   position: absolute;
-  left: 88%;
-  top: 86.5%;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 40px;
   height: auto;
   object-fit: contain;
   background-color: white;
@@ -68,7 +60,7 @@ body::after {
   font-family: "Adieu", sans-serif;
   border: none;
   padding: 10px 20px;
-  font-size: 1rem;
+  font-size: 16px;
   cursor: pointer;
   transition: opacity 0.2s ease;
 }
@@ -83,21 +75,17 @@ body::after {
   transform: translateX(-50%) rotate(-10deg);
   top: 60%;
   width: auto;
-  height: 400px;
+  height: 250px;
   border-radius: 15px;
   transform-origin: center;
 }
-
-
-
-
 
 .artwork-container {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
   width: 100vw;
-  height: 400px;
+  height: 250px;
   overflow: hidden;
   display: flex;
 }
@@ -105,9 +93,8 @@ body::after {
 .artwork-scroll {
   display: flex;
   align-items: center;
-  gap: 50px;
+  gap: 30px;
   animation: none;
-  transform: translateX(calc(50vw - 1200px - 125px));
 }
 
 .artwork-container.scrolling .artwork-scroll {
@@ -126,13 +113,140 @@ body::after {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
 }
 
 @keyframes scrollLeft {
   0% {
-    transform: translateX(calc(50vw - 1200px - 125px));
+    transform: translateX(calc(50vw - 400px));
   }
   100% {
-    transform: translateX(calc(50vw - 1200px - 125px - 2700px));
+    transform: translateX(calc(50vw - 400px - 2000px));
   }
+}
+
+/* Tablet Styles */
+@media (min-width: 768px) {
+  .app-undertitle {
+    left: 40px;
+    top: 200px;
+    transform: none;
+  }
+  .app-title {
+    font-size: 140px;
+  }
+  .app-monalisa {
+    height: 350px;
+  }
+  .artwork-container {
+    height: 350px;
+  }
+  .app-sort {
+    display: block;
+    position: absolute;
+    right: 50px;
+    top: 280px;
+    left: auto;
+    font-family: 'Canela', sans-serif;
+    font-size: 24px;
+    letter-spacing: -0.032em;
+    line-height: 0.8;
+  }
+  .app-sort-s1 { margin-left: 30px; }
+  .app-sort-s2 { margin-left: 100px; }
+  .app-sort-s3 { position: absolute; transform: translate(40px, 10px); }
+  .app-sort-s4 { position: absolute; transform: translate(30px, 100px); }
+
+  .app-arrow {
+    display: block;
+    position: absolute;
+    right: 80px;
+    top: auto;
+    bottom: 150px;
+    width: 100px;
+  }
+  .app-button {
+    left: auto;
+    right: 50px;
+    bottom: 50px;
+    transform: none;
+  }
+}
+
+/* Desktop Styles */
+@media (min-width: 1024px) {
+  .app-undertitle {
+    left: 20%;
+    top: 40%;
+    font-size: 16px;
+    right: 60px;
+    transform: none;
+  }
+  .app-title {
+    font-size: 220px;
+  }
+  .app-monalisa {
+    height: 400px;
+  }
+  .artwork-container {
+    height: 400px;
+  }
+  .app-sort {
+    font-size: 32px;
+    right: 25%;
+    top: 45%;
+    transform: translateY(-50%);
+    left: auto;
+  }
+  .app-sort-s1 { margin-left: 50px; }
+  .app-sort-s2 { margin-left: 200px; }
+  .app-sort-s3 { transform: translate(70px, 10px); }
+  .app-sort-s4 { transform: translate(50px, 150px); }
+
+  .app-arrow {
+    right: 20%;
+    bottom: 120px;
+    width: 125px;
+  }
+  .app-button {
+    top: auto;
+    left: auto;
+    bottom: 60px;
+    right: 60px;
+    transform: none;
+  }
+  .artwork-scroll {
+    gap: 50px;
+  }
+}
+
+.fabric-mask {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  z-index: 1000;
+  opacity: 0;
+  transition: opacity 0.3s ease-out;
+  pointer-events: none;
+}
+
+.fabric-mask.visible {
+  opacity: 1;
+}
+
+.info-section-wrapper {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.5s ease-in, visibility 0.5s ease-in;
+  position: relative;
+  z-index: 2000;
+}
+
+.info-section-wrapper.visible {
+  background: linear-gradient(to bottom, #F6F2EA, #FDE5D8, #F6F2EA);
+  opacity: 1;
+  visibility: visible;
 }

@@ -1,0 +1,75 @@
+.how-it-works {
+  background-color: transparent;
+  padding: 80px 24px;
+  text-align: center;
+}
+
+.how-it-works-title {
+  font-family: 'Adieu', sans-serif;
+  font-size: 48px;
+  margin-bottom: 60px;
+  color: black;
+}
+
+.steps-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.step-card {
+  background-color: rgba(255, 255, 255, 0.6);
+  border: 3px solid rgba(255, 255, 255, 0.6);
+  padding: 30px;
+  border-radius: 15px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.step-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+}
+
+.step-number {
+  font-family: 'Adieu', sans-serif;
+  font-size: 24px;
+  color: #888;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.step-title {
+  font-family: 'Canela', sans-serif;
+  font-size: 28px;
+  margin-bottom: 15px;
+  color: black;
+}
+
+.step-description {
+  font-family: 'Adieu', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Tablet */
+@media (min-width: 768px) {
+  .steps-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+  }
+}
+
+/* Desktop */
+@media (min-width: 1024px) {
+  .how-it-works-title {
+    font-size: 64px;
+  }
+  .steps-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 60px;
+  }
+} 

@@ -8,9 +8,9 @@ body {
   font-family: 'Love', sans-serif;
   color: #fff;
   background-color: #000;
-  height: 10000px;
   width: 100vw;
   overflow-x: hidden;
+  background-color: red;
 }
 
 a {
@@ -29,7 +29,7 @@ a {
   font-family: 'Romie';
   src: url('/fonts/romie.ttf') format('truetype');
   font-weight: normal;
-  font-style: normal;
+  font-style: normal; 
 }
 
 @font-face {
