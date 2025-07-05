@@ -10,9 +10,9 @@ const InfoSection = () => {
         </p>
       </div>
       <div className="frames-wrapper">
-        <div className="frame" style={{ backgroundColor: '#D8D8D8' }}></div>
-        <div className="frame" style={{ backgroundColor: '#C0C0C0' }}></div>
-        <div className="frame" style={{ backgroundColor: '#A8A8A8' }}></div>
+        <div className="frame"><p>Explore Artists</p><h1>Discover diverse artistic talent.</h1></div>
+        <div className="frame"><p>Become a Collector</p><h1>Start building your personal art collection.</h1></div>
+        <div className="frame"><p>Discover Artworks</p><h1>Explore captivating creations.</h1></div>
       </div>
     </div>
   );

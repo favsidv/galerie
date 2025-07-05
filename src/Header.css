@@ -24,6 +24,7 @@ header {
 .header-catalogue, .header-contact {
   font-family: 'Adieu', sans-serif;
   font-size: 15px;
+  color: black;
 }
 
 .header-catalogue:hover, .header-contact:hover {
@@ -37,6 +38,7 @@ header {
   transform: translateX(-50%);
   font-family: 'Bigilla', sans-serif;
   font-size: 30px;
+  color: black;
   font-feature-settings: "liga" on;
   cursor: pointer;
   transition: opacity 0.2s ease;
@@ -49,6 +51,7 @@ header {
 .header-currency {
   margin-right: 20px;
   margin-left: auto;
+  color: black;
 }
 
 .currency-select {
@@ -76,7 +79,7 @@ header {
 .hamburger-line {
   width: 25px;
   height: 1px;
-  background-color: white;
+  background-color: black;
   margin: 3px 0;
   transition: 0.3s;
 }
@@ -100,7 +103,7 @@ header {
   left: 0;
   width: 100vw;
   height: 100vh;
-  background-color: rgba(0, 0, 0, 0.95);
+  backdrop-filter: blur(100px);
   z-index: 999;
   display: flex;
   align-items: center;
@@ -125,7 +128,7 @@ header {
 .mobile-menu-item {
   font-family: 'Adieu', sans-serif;
   font-size: 24px;
-  color: white;
+  color: black;
   text-decoration: none;
   transition: opacity 0.2s ease;
 }
@@ -144,23 +147,23 @@ header {
 .mobile-menu-currency label {
   font-family: 'Adieu', sans-serif;
   font-size: 16px;
-  color: white;
+  color: black;
 }
 
 .mobile-currency-select {
   padding: 8px 12px;
   font-family: 'Adieu', sans-serif;
   font-size: 16px;
-  color: white;
+  color: black;
   background: transparent;
-  border: 1px solid white;
+  border: 1px solid black;
   border-radius: 4px;
   cursor: pointer;
 }
 
 .mobile-currency-select option {
-  background-color: black;
-  color: white;
+  background-color: white;
+  color: black;
 }
 
 @media (max-width: 900px) {
