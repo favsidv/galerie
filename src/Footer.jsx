@@ -17,9 +17,9 @@ const Footer = () => {
         </div>
         <div className="footer-column">
           <h4 className="footer-heading">Ecosystem</h4>
-          <a href="#" className="footer-link">Flow</a>
-          <a href="#" className="footer-link">Privy</a>
-          <a href="#" className="footer-link">???</a>
+          <a href="https://flow.com/" target="_blank" className="footer-link">Flow</a>
+          <a href="https://www.privy.io/" target="_blank" className="footer-link">Privy</a>
+          <a href="https://ethglobal.com/" target="_blank" className="footer-link">ETHGlobal</a>
         </div>
         <div className="footer-column">
           <h4 className="footer-heading">Company</h4>

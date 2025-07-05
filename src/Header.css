@@ -219,3 +219,18 @@ header {
     margin-top: 3px;
   }
 }
+
+.header-login {
+  margin-left: 20px;
+  font-family: 'Helvetica', sans-serif;
+  padding: 10px 20px;
+  font-size: 15px;
+  color: black;
+  background-color: white;
+  border-radius: 50px;
+  transition: all 0.2s ease;
+}
+
+.header-login:hover {
+  background-color: rgba(255, 255, 255, 0.5);
+}

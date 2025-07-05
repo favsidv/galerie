@@ -52,7 +52,7 @@ function Header() {
         <div className='mobile-menu-content'>
           <a href="" className='mobile-menu-item'>CATALOGUE</a>
           <a href="" className='mobile-menu-item'>CONTACT</a>
-          <a href="" className='mobile-menu-item'>LOGIN</a>
+          <a href="#" className='mobile-menu-item'>LOGIN</a>
         </div>
       </div>
 
