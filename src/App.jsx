@@ -154,10 +154,8 @@ function App() {
       <style>{keyframes}</style>
       <div className='app'>
         <p className='app-undertitle'>ONCHAIN<br />GALLERY</p>
-        <p className='app-title'>DiGital Arts<br /><span style={{fontFeatureSettings: '"ss01" on'}}>&</span><br />DESIGN</p>
-        <p className='app-sort'>Balance<br /><span className="app-sort-s1">your space,</span><br /><span className="app-sort-s2">and</span><br /><span className="app-sort-s3">Tokenize<br />your vision.</span><br /><span className="app-sort-s4">Enter<br />the gallery.</span></p>
-        <img src="/images/arrow.svg" alt="app-image" className='app-arrow' />
-        <button className='app-button'>SHOP NOW</button>
+        <p className='app-title'>A GALERIE<br />FOr<br />DIGITAL ArTS</p>
+        <p className='app-sort'>Balance<br /><span className="app-sort-s1">your space,</span><br /><span className="app-sort-s2">and</span><br /><span className="app-sort-s3">Tokenize<br />your vision.</span></p>
       </div>
       <img 
         ref={monalisaRef}

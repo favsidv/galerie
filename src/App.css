@@ -194,7 +194,6 @@ body::after {
   }
   .app-sort {
     font-size: 32px;
-    right: 25%;
     top: 45%;
     transform: translateY(-50%);
     left: auto;
