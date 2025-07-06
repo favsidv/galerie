@@ -93,6 +93,7 @@
 }
 
 .app-monalisa {
+  margin-left: 8px;
   position: absolute;
   left: 50%;
   transform: translateX(-50%) rotate(-10deg);
