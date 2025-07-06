@@ -1,4 +1,3 @@
-/* Base styles (Mobile) */
 .app {
   display: flex;
   justify-content: center;
@@ -43,11 +42,11 @@
 }
 
 .app-sort {
-  display: none; /* Hidden on mobile */
+  display: none;
 }
 
 .app-arrow {
-  display: none; /* Hidden on mobile */
+  display: none;
 }
 
 .app-button {
@@ -206,7 +205,6 @@
   }
 }
 
-/* Desktop Styles */
 @media (min-width: 1024px) {
   .app-undertitle {
     left: 20%;

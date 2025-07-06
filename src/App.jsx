@@ -1,10 +1,5 @@
 import './App.css'
 import { useEffect, useRef, useState } from 'react'
-import InfoSection from './InfoSection';
-import HowItWorks from './HowItWorks';
-import MarketPerformance from './MarketPerformance';
-import FAQ from './FAQ';
-import Footer from './Footer';
 
 function App() {
   const monalisaRef = useRef(null)
@@ -167,14 +162,6 @@ function App() {
             alt="Artwork 5"
             className='artwork-item artwork-main'
           />
-        </div>
-        
-        <div className='info-section-wrapper visible'>
-          <InfoSection />
-          <HowItWorks />
-          <MarketPerformance />
-          <FAQ />
-          <Footer />
         </div>
       </div>
     </>
