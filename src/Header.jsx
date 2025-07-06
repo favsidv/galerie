@@ -37,7 +37,7 @@ function Header() {
         <a href="" className='header-catalogue'>CATALOGUE</a>
         <p className='header-logo' onClick={() => window.location.href = '/'}>GALERIE</p>
         <div className='header-right'>
-          <a href="" className='header-contact'>CONTACT</a>
+          <a href="" className='header-contact' style={{cursor: 'not-allowed'}}>CONTACT</a>
           <a href="" className='header-login'>LOGIN</a>
         </div>
         

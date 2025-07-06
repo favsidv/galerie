@@ -16,7 +16,7 @@ const faqs = [
   },
   {
     question: 'What are the fees?',
-    answer: 'We believe in transparency. We charge a small initial sourcing fee included in the share price and a minimal annual management fee. There are no hidden costs.'
+    answer: 'We believe in transparency. We charge a small initial sourcing fee included in the share price. There are no hidden costs.'
   }
 ];
 
@@ -24,7 +24,7 @@ const FAQItem = ({ faq, index, activeIndex, setActiveIndex }) => {
   const isActive = index === activeIndex;
 
   return (
-    <div className="faq-item">
+    <div className="faq-item" id="faq">
       <button className="faq-question" onClick={() => setActiveIndex(isActive ? null : index)}>
         <span>{faq.question}</span>
         {isActive ? (

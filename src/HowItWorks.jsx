@@ -15,16 +15,16 @@ import artwork9 from '/images/artwork9.png';
 const HowItWorks = () => {
   const steps = [
     {
-      title: 'Investing in real estate has never been easier',
-      description: 'Buy fractional ownership in real estate across the world'
+      title: 'Create Your Account',
+      description: 'Sign up in seconds—no wallet or crypto knowledge needed.'
     },
     {
-      title: 'Receive Weekly Rental Income',
-      description: 'Increase your portfolio with weekly rental payments as well as gains in property value.'
+      title: 'Fund Instantly',
+      description: 'Add funds via card, bank transfer, or crypto. Your choice.'
     },
     {
-      title: 'Join 20,000+ token holders',
-      description: 'Earning 6-16% rental income yearly since 2019.'
+      title: 'Buy Art Shares',
+      description: 'Browse artworks and purchase fractions in just a few clicks.'
     }
   ];
 
@@ -42,7 +42,7 @@ const HowItWorks = () => {
 
   return (
     <section className="how-it-works">
-      <h2 className="how-it-works-title">How It Works</h2>
+      <h2 className="how-it-works-title" id="how-it-works">How It Works</h2>
       <h3 className="how-it-works-undertitle">A simple and secure way to invest in art.</h3>
       <div className="how-it-works-content">
         <div className="steps-container">
