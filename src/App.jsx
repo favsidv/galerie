@@ -8,6 +8,7 @@ function App() {
   const artwork5ScrollingRef = useRef(null)
   const artworkScrollRef = useRef(null)
   const maxProgressRef = useRef(0)
+  const maxScrollRef = useRef(350)
   const [keyframes, setKeyframes] = useState('');
   const [initialTop, setInitialTop] = useState(null);
 
@@ -21,6 +22,11 @@ function App() {
     const calculateScroll = () => {
       if (!artworkScrollRef.current || !artwork5ScrollingRef.current) {
         return;
+      }
+
+      if (initialTop !== null && artworkContainerRef.current) {
+        const destinationTop = artworkContainerRef.current.parentElement.offsetTop
+        maxScrollRef.current = destinationTop - initialTop
       }
 
       const scrollContainer = artworkScrollRef.current;
@@ -56,13 +62,13 @@ function App() {
       clearTimeout(timer);
       window.removeEventListener('resize', calculateScroll);
     }
-  }, []);
+  }, [initialTop]);
 
   useEffect(() => {
     const handleScroll = () => {
       if (monalisaRef.current && artworkContainerRef.current && artwork5StaticRef.current && artwork5ScrollingRef.current && initialTop !== null) {
         const scrollY = window.scrollY
-        const maxScroll = 350
+        const maxScroll = maxScrollRef.current
         
         const currentProgress = Math.min(scrollY / maxScroll, 1)
         
@@ -81,9 +87,7 @@ function App() {
         monalisaRef.current.style.top = `${initialTop + translateY}px`
         monalisaRef.current.style.transform = `translateX(-50%) rotate(${currentRotation}deg)`
         
-        const finalTranslateY = 1 * maxScroll
-        
-        artworkContainerRef.current.style.top = `${initialTop + finalTranslateY}px`
+        // const finalTranslateY = 1 * maxScroll
         
         if (progress >= 1) {
           monalisaRef.current.style.opacity = '0';
@@ -118,14 +122,14 @@ function App() {
         <p style={{zIndex: 2}} className='app-sort'>Balance<br /><span className="app-sort-s1">your space,</span><br /><span className="app-sort-s2">and</span><br /><span className="app-sort-s3">Tokenize<br />your vision.</span></p>
         <button style={{zIndex: 2}} className='app-shop-button'>SHOP NOW</button>
       </div>
-      <div style={{zIndex: 2}}>
-        <img 
-          ref={monalisaRef}
-          src="/images/joconde.jpg" 
-          alt="Mona Lisa, La Joconde"
-          className='app-monalisa'
-          style={{zIndex: 2}}
-        />
+      <img 
+        ref={monalisaRef}
+        src="/images/joconde.jpg" 
+        alt="Mona Lisa, La Joconde"
+        className='app-monalisa'
+        style={{zIndex: 2}}
+      />
+      <section className='artworks-section' style={{ position: 'relative' }}>
         <div 
           ref={artworkContainerRef}
           className='artwork-container'
@@ -163,7 +167,7 @@ function App() {
             className='artwork-item artwork-main'
           />
         </div>
-      </div>
+      </section>
     </>
   )
 }

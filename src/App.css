@@ -104,7 +104,7 @@
 }
 
 .artwork-container {
-  position: absolute;
+  position: relative;
   left: 50%;
   transform: translateX(-50%);
   width: 100vw;
@@ -148,7 +148,6 @@
   }
 }
 
-/* Tablet Styles */
 @media (min-width: 768px) {
   .app-undertitle {
     left: 40px;
