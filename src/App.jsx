@@ -87,8 +87,6 @@ function App() {
         monalisaRef.current.style.top = `${initialTop + translateY}px`
         monalisaRef.current.style.transform = `translateX(-50%) rotate(${currentRotation}deg)`
         
-        // const finalTranslateY = 1 * maxScroll
-        
         if (progress >= 1) {
           monalisaRef.current.style.opacity = '0';
           artwork5StaticRef.current.style.opacity = '0';
@@ -120,7 +118,7 @@ function App() {
         <p style={{zIndex: 2}} className='app-undertitle'>ONCHAIN<br />GALLERY</p>
         <p style={{zIndex: 2}} className='app-title'>A GALErIE<br />FOr<br />DIGITAL ArTS</p>
         <p style={{zIndex: 2}} className='app-sort'>Balance<br /><span className="app-sort-s1">your space,</span><br /><span className="app-sort-s2">and</span><br /><span className="app-sort-s3">Tokenize<br />your vision.</span></p>
-        <button style={{zIndex: 2}} className='app-shop-button'>SHOP NOW</button>
+        <button style={{zIndex: 2}} className='app-shop-button' onClick={() => {window.open('https://appgalerie.vercel.app', '_blank')}}>SHOP NOW</button>
       </div>
       <img 
         ref={monalisaRef}
