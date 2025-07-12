@@ -34,11 +34,11 @@ function Header() {
   return (
     <>
       <header className={isVisible ? 'header-visible' : 'header-hidden'}>
-        <a href="https://appgalerie.vercel.app" target="_blank" className='header-catalogue'>CATALOGUE</a>
+        <a href="https://app-galerie-fi.vercel.app/" target="_blank" className='header-catalogue'>CATALOGUE</a>
         <p className='header-logo' onClick={() => window.location.href = '/'}>GALERIE</p>
         <div className='header-right'>
           <a href="mailto:edenbaud1@gmail.com" className='header-contact'>CONTACT</a>
-          <a href="https://appgalerie.vercel.app" target="_blank" className='header-login'>LOGIN</a>
+          <a href="https://app-galerie-fi.vercel.app/" target="_blank" className='header-login'>LOGIN</a>
         </div>
         
         <div className='hamburger-menu' onClick={toggleMenu}>
@@ -50,9 +50,9 @@ function Header() {
       
       <div className={`mobile-menu ${isMenuOpen ? 'open' : ''}`}>
         <div className='mobile-menu-content'>
-          <a href="https://appgalerie.vercel.app" target="_blank" className='mobile-menu-item'>CATALOGUE</a>
+          <a href="https://app-galerie-fi.vercel.app/" target="_blank" className='mobile-menu-item'>CATALOGUE</a>
           <a href="mailto:edenbaud1@gmail.com" className='mobile-menu-item'>CONTACT</a>
-          <a href="https://appgalerie.vercel.app" target="_blank" className='mobile-menu-item'>LOGIN</a>
+          <a href="https://app-galerie-fi.vercel.app/" target="_blank" className='mobile-menu-item'>LOGIN</a>
         </div>
       </div>
 
